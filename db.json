@@ -102,6 +102,12 @@
       "rating": 5,
       "comment": "Review 5 for product 5",
       "productId": "5"
+    },
+    {
+      "id": "6",
+      "rating": 5,
+      "comment": "Review 5 for product 5",
+      "productId": "5"
     }
   ]
 }
