@@ -1,0 +1,16 @@
+<br/><br/>
+
+<h1>User Login Form:</h1>
+<form [formGroup]="form" (submit)="onSubmit()">
+
+    Enter your Email:
+    <input type="email" name="email"placeholder="Email" formControlName="email"><br/><br/>
+    Enter your Password:
+    <input type="password" placeholder="Password" formControlName="password"><br/><br/>
+    Enter your Salary:
+    <input type="number" placeholder="Salary" formControlName="salary"><br/><br/>
+  <button [disabled]="!form.valid" type="submit">
+    Login
+  </button>
+
+</form>

@@ -1,0 +1,28 @@
+
+
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>Emp Id</th>
+            <th>Emp Name</th>
+            <th>Salary</th>
+            <th>Date of Joining</th>
+            <th>Employement Type</th>
+        </tr>
+        <tr *ngFor="let i of emps">
+            <td>{{i.eid}}</td>
+            <td>{{i.ename}}</td>
+            <td>{{i.salary}}</td>
+            <td>{{i.city}}</td>
+            <td>{{i.doj|date}}</td>
+            <td *ngIf="i.emptype; else temp">
+                Permanent Employee
+            </td>
+            <td>
+              <ng-template #temp>
+                Trainee
+              </ng-template>
+            </td>
+        </tr>
+    </table>
+</div>

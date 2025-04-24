@@ -1,0 +1,13 @@
+<h1>Add new employee</h1>
+
+<div>
+    <form>
+    Eid: <input type="text" id="eid" [(ngModel)]="e.eid" #ngModel name="eid"><br>
+    <!-- id and name should be the same elseuse standalone:true -->
+    EName: <input type="text" id="ename" [(ngModel)]="e.ename" #ngModel [ngModelOptions]="{standalone:true}"><br>
+    Salary: <input type="number" id="salary" [(ngModel)]="e.salary" #ngModel [ngModelOptions]="{standalone:true}"><br>
+    Doj: <input type="date" id="doj" [(ngModel)]="e.doj" #ngModel [ngModelOptions]="{standalone:true}"><br>
+    Emptype: <input type="text" id="emptype" [(ngModel)]="e.emptype" #ngModel [ngModelOptions]="{standalone:true}"><br>
+    <input type="button" (click)="Addemp(e)" value="Add Employee">
+    </form>
+</div>

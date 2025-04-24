@@ -1,0 +1,66 @@
+src > app is the root component which contains other components.
+
+In angular, every component will have 4 files:
+1. app.component.html- UI-Html code
+2. app.component.css - stylesheets
+3. app.component.ts - typescript file - logic of the page is written
+4. app.component.spec.ts - unit testing file to mitigate any error, unit testing is done by developers only.
+
+
+index.html (Spa) calls app.components (ts file) which calls other components.
+
+
+one data binding is done via string interpolation.
+two data binding is done via  [(ngModel)]. // import FormsModule in app.module.ts
+property binding is via [], [src]
+event binding - ()
+
+creating a component - ng generate component componentName or ng g c componentName.
+
+add component selector name in app-component.html (which is running in index.html).
+COMPONENTs are like web pages only.
+
+Routing in Angular (navigating through different webpages):
+1. app-routing.module 
+
+    1. import statements:
+
+    import { SecondComponent } from './second/second.component';
+    import { FirstComponent } from './first/first.component';
+
+    2. add paths:
+
+    const routes: Routes = [
+    {path : 'login',component:SecondComponent},
+    {path:'register',component:FirstComponent}
+    ];
+
+    3. routerLink works as href in Angular
+
+    <a routerLink="login">Login</a>
+    <a routerLink="register">Register</a>
+  
+
+    4. routeroutlet
+    
+    <!-- this is where the content of the child pages are displayed -->
+    <router-outlet></router-outlet>
+
+
+Dependency Injection
+
+Services in Angular helps us to fetch data across components
+To generate new services ;-> ng g s servicename
+Anything that is inside services is accesible bt all other components.
+It has 2 files ( no html or css file):
+1. ts 
+2. spec.ts
+
+steps for di:
+1. create a service -- ng generate service <servicename> in testservice.ts file.
+2. go to app.component.ts file , import it.
+3. pass that service as a private instance in the constructor (the injector checks if any instance of the service exixts
+in the angular registry to share, if not, then it creates a new instance of the service and then share it in the 
+angular registry which is sharable among every other components).
+4. call that service using that private instance.
+
