@@ -1,0 +1,40 @@
+{
+"reviews": [
+    {
+      "id": "1",
+      "rating": 5,
+      "comment": "Review 1 for product 1",
+      "productId": "1"
+    },
+    {
+      "id": "2",
+      "rating": 4,
+      "comment": "Review 2 for product 2",
+      "productId": "2"
+    },
+    {
+      "id": "3",
+      "rating": 5,
+      "comment": "Review 3 for product 3",
+      "productId": "3"
+    },
+    {
+      "id": "4",
+      "rating": 4,
+      "comment": "Review 4 for product 4",
+      "productId": "4"
+    },
+    {
+      "id": "5",
+      "rating": 5,
+      "comment": "Review 5 for product 5",
+      "productId": "5"
+    },
+    {
+      "id": "6",
+      "rating": 5,
+      "comment": "Review 5 for product 5",
+      "productId": "5"
+    }
+  ]
+}
